@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 5%;
+            margin-top: 5%;
+
+        }
+        .playbox {
+            background-color: lightblue; 
+            width: 200px; 
+            height: 200px; 
+            border: solid 2px black; 
+            border-radius: 3%;
+            margin-bottom: 2%;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <div class="container">
+        {% for x in range(boxes)%}
+        <div class="playbox" style="background-color: {{change_color}}"></div>
+        {% endfor %}
+    </div>
+</body>
+</html>
